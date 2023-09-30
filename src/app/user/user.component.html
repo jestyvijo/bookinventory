@@ -1,0 +1,28 @@
+<!--Main Navigation-->
+<div class="row">
+        <div class="col-md-3">
+            <header>
+                <!-- Sidebar -->
+                <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+                    <div class="position-sticky">
+                        <div class="list-group list-group-flush mx-3 mt-4">
+                            <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                                <i class="fa fa-tachometer fa-fw me-3"></i><span>Main dashboard</span>
+                            </a>
+                            <a href="/user" class="list-group-item list-group-item-action py-2 ripple"><i
+                                    class="fa fa-lock fa-fw me-3"></i><span>Add Book</span></a>
+            
+                            <a href="/user/list" class="list-group-item list-group-item-action py-2 ripple"><i
+                                    class="fa fa-globe fa-fw me-3"></i><span>Book Listing</span></a>
+                            <a href="/user/update" class="list-group-item list-group-item-action py-2 ripple"><i
+                                    class="fa fa-building fa-fw me-3"></i><span>Update Book</span></a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <router-outlet></router-outlet>
+        </div>
+</div>

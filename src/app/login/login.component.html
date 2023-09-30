@@ -1,0 +1,24 @@
+<div class="row container mt-5">
+    <div class="col-md-4"></div>
+    <div class="col-md-6 card card-container">
+        <div style="text-align: center;">
+            <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card"
+                height="150" width="150" alt="avatar" />
+        </div>
+
+        <form (ngSubmit)="onSignin(f)" #f="ngForm">
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input type="email" id="email" name="email" ngModel class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" ngModel class="form-control">
+            </div>
+            <div style="text-align: center;" class="mt-4">
+                <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign In</button>
+            </div><br/>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>

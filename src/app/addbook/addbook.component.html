@@ -1,0 +1,30 @@
+<form [formGroup]="formdata" (ngSubmit)="subData(formdata.value)">
+    <p *ngIf="!formdata.valid else valid" style="color: red;font-weight: bold;">Please Fill All the fields</p>
+    <ng-template #valid>
+        <p></p>
+    </ng-template>
+    <div>{{msg}}</div>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" formControlName="title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" formControlName="author" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="generation">Generation</label>
+        <input type="text" id="generation" name="generation" formControlName="generation" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="year">Publication Year</label>
+        <input type="number" placeholder="YYYY" min="1990" max="2023" id="year" name="year" formControlName="year" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="qty">Quantity in stock</label>
+        <input type="number" id="qty" name="qty" formControlName="qty" class="form-control">
+    </div>
+    <div style="text-align: center;" class="mt-4">
+        <button class="btn btn-primary" type="submit">Add Book</button>
+    </div><br/>
+</form>

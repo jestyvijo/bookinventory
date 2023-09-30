@@ -1,0 +1,11 @@
+<table border="2" class="table table-responsive">
+    <tr *ngFor="let item of da | keyvalue">
+        <td style="border: solid green;border-width: 4px;">{{ item.key }}</td>
+        <td style="border: solid rgb(128, 0, 0);border-width: 4px;">{{ item.value }}</td>
+        <td style="border: solid rgb(128, 0, 0);border-width: 4px;">
+            <a href="">
+                <button class="btn btn-danger"(click)="deleteData(item.value)">Delete</button>
+            </a>
+        </td>
+    </tr>
+</table>
